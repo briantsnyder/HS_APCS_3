@@ -1,0 +1,62 @@
+import java.util.Scanner; // imports scanner
+public class BuyNFLJerseys {
+    public static void main(String [] args) {
+    Scanner in = new Scanner(System.in); // initilizes scanner
+    
+    System.out.println("Welcome to the NFL Store"); // welcoming message
+    
+    System.out.print("Please enter in your first and last name:  "); // asks for name
+    String nameFirst = in.next(); // first word is saved as first name
+    String nameLast = in.next(); // second word is saved as last name
+    
+    System.out.print("Enter in today's date (mm/dd/yyyy):  "); // asks for the date
+    String date = in.next(); // saves date as a string
+    String date2 = date.replaceAll("/", "-"); // replaces / with -, changing the date to the correct format for the receipt
+    
+    System.out.print("Which NFl team are you interested in?  "); // asks from what team does the customer want an item from
+    String teamName = in.next(); // saves data as a string
+    
+    System.out.print("What type of apparel would you like to buy from this team?  "); // asks for type of apparel
+    String apparelType = in.next(); // saves data as a string
+    
+    System.out.print("Which color would you like?  "); // asks for color of apparel
+    String color = in.next(); // saves data as a string
+    
+    System.out.print("What size would you like?  "); // asks for size of apparel
+    String size = in.next(); // saves data as a string
+    
+    System.out.print("How many of this item would you like?  "); // asks for quantity
+    String quantity = in.next(); // saves data as a string
+    int number = Integer.parseInt(quantity); // converts string to an integer to do math later on
+    
+    System.out.print("What is the price of this item?  "); // asks for the price of the item
+    String price = in.next(); // saves data as a string
+    double itemPrice = Double.parseDouble(price); // converts string to a double so math can be done on it
+    double total = (itemPrice * number); // the total cost is found by multiplying the quanitity by the price
+    
+    System.out.print("Please enter in your debit card (#####-###-####):  "); // asks for a debit card
+    String cardNumber = in.next(); // saves data as a string
+    
+    System.out.print("Please enter in you PIN (#####):  "); // asks for the PIN
+    String pin = in.next(); // saves data as a string
+    
+    String orderNumber = color.substring(0,2) + cardNumber.substring(6,9); // the order number is taken by the beginning characters of the color
+                                                                           // and the middle set of digits of the debit card
+    //e-Receipt
+    System.out.println("\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"); // heading of receipt
+    System.out.println("                        THE NFL STORE                                ");
+    System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+    System.out.println("Your e-Receipt");
+    System.out.println("\n\n" + date2); // displays the date in the new correct format
+    System.out.println("Order Number: "+ orderNumber); // displays the order number
+    System.out.println("\n  " + nameFirst.substring(0,1) + ".  " + nameLast); // displays the first initial followed by the last name
+    System.out.println("  Account: #####-###-" + cardNumber.substring(10)); // shows the last four digits of the card number
+    System.out.println("  Item: " + teamName + "' " + size + " " + color + " " + apparelType); // displays which item was purchased
+    System.out.println("  Quantity: " + number); // displays quantity
+    System.out.println("  Item Price: $" + itemPrice); // displays individual item price
+    System.out.println("\n\n  Total: $" + total); // displays the total
+    System.out.println("  $" + total + " will be debited to your account."); // says the total is debited to the customer's account
+    System.out.println("\n\n  Thank you for shopping at THE NFL STORE");     // and thanks the customer
+    
+    } 
+}
