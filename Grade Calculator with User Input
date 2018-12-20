@@ -1,0 +1,66 @@
+import java.util.Scanner; // imports scanner class
+public class GradesV3
+{
+    public static void main(String[ ] args)
+    {
+        Scanner in = new Scanner(System.in); // initializes scanner class
+        
+        //local variables
+        int numTest = 0; // counts number of tests
+        int testGrade = 0; // individual test grade
+        int totalPoints = 0; // total points for all tests
+        double average = 0.0; // average grade
+        
+        // Strings
+        String enterTest = "Please enter test score for Test #"; // String used in print statements, allows the string name to be used rather than this whole 
+                                                                 // sentence being written multiple times
+                                                                 
+        System.out.println("Please enter your full name"); // System asks for student name
+        String name = in.next(); // Expecting multiple words, the system saves the name as a single string
+        name += in.nextLine();   // and adds additional words to the string
+        
+        System.out.println("Please enter the class subject"); // System asks for the subject
+        String subject = in.next(); // saves subject name as a string
+        
+        numTest++; // incraments numTest so that for the following print statements it does not require writting out the test # each time in the print
+                   // statement, allows for more tests to be more easily added
+        System.out.println(enterTest + numTest); // system asks for a test score
+        int test1 = in.nextInt(); // saves score as an int
+        
+        numTest++; // incraments numTest
+        System.out.println(enterTest + numTest); // system asks for a test score
+        int test2 = in.nextInt(); // saves score as an int
+        
+        numTest++; // incraments numTest
+        System.out.println(enterTest + numTest); // system asks for a test score
+        int test3 = in.nextInt(); // saves score as an int
+        
+        System.out.println("");
+        System.out.println("Student Name:  " + name + "      Subject: " + subject); // prints the student's name and subject
+        System.out.println("");
+        
+        numTest = 0; // resets numTest so the following calculations work
+        
+        // code from GradesV2 that calculates the average score given the test score
+        testGrade = test1;  // initial test score
+        numTest++;       // # of tests increments
+        totalPoints += testGrade; // adds test one to current total
+        average = (totalPoints / (double)numTest); // divides total by the number of tests to give the average
+        System.out.println("Test # " + numTest + "  Test Grade: " + testGrade + "   Total Points: " + totalPoints + "    Average Score: " + average); // prints the results
+        
+        // calculates the average score for the given test scores
+        testGrade = test2; // second test score
+        numTest++;      // # of tests increments
+        totalPoints += testGrade; // adds test two to current total
+        average = (totalPoints / (double)numTest); // divides total by the number of tests to give the average
+        System.out.println("Test # " + numTest + "  Test Grade: " + testGrade + "   Total Points: " + totalPoints + "   Average Score: " + average); // prints the results
+        
+        // calculates the average score for the given test scores
+        testGrade = test3; // third test score
+        numTest++;      // # of tests increments
+        totalPoints += testGrade; // adds test three to current total
+        average = (totalPoints / (double)numTest); // divides total by the number of tests to give the average
+        System.out.println("Test # " + numTest + "  Test Grade: " + testGrade + "   Total Points: " + totalPoints + "   Average Score: " + average); // prints the results
+        
+    }//end of main method
+}//end of class
