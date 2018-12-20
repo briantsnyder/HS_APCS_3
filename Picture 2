@@ -1,0 +1,30 @@
+public class ArtWork { // beginning of class
+    public static void main(String [ ] args) { // beginning of main method
+    // Strings that each display a line of the art
+    // each string except the first have \n, allowing the nest string to appear on the next line
+    String row01 = "               |";
+    String row02 = "\n               |";
+    String row03 = "\n              /^\\";
+    String row04 = "\n             /^^^\\";
+    String row05 = "\n            |^^^^^|";
+    String row06 = "\n         ___|_|_|_|___";
+    String row07 = "\n        |   |     |   |";
+    String row08 = "\n        |   |     |   |";
+    String row09 = "\n        |   |     |   |";
+    String row10 = "\n       /^\\ /^\\___/^\\ /^\\";
+    String row11 = "\n      _|*|_|*|___|*|_|*|_";
+    String row12 = "\n     /^ ^ ^ ^\\   /^ ^ ^ ^\\";
+    String row13 = "\n     | ----- |___| ----- |";
+    String row14 = "\n     | ---- / ^ ^ \\ ---- |";
+    String row15 = "\n     | --- /___^___\\ --- |";
+    String row16 = "\n     |     | /   \\ |     |";
+    String row17 = "\n     |     | |___| |     |";
+    String row18 = "\n     |____/ /    \\  \\____|";
+    String row19 = "\n     /~~~/ /      \\  \\~~~~\\";
+    String row20 = "\n     ----------------------";
+    String row21 = "\n        -Brian Snyder"; // Signature
+    //Print statement that displays all of the strings
+    System.out.print(row01+row02+row03+row04+row05+row06+row07+row08+row09+row10+row11+row12+row13+row14+row15+row16+row17+row18+row19+row20+row21);
+    
+} // end of main method
+} // end of class
